@@ -4,7 +4,7 @@ __author__ = 'medusa'
 import pygeoip
 
 print "Thanks to OccupyTheWeb, full tutorial here:  http://null-byte.wonderhowto.com/how-to/hack-like-pro-find-exact-location-any-ip-address-0161964/"
-gip = pygeoip.GeoIP('/home/medusa/misc/geolite/pygeoip-0.1.3/GeoLiteCity.dat')
+gip = pygeoip.GeoIP('/home/b3yond/files/GeoLiteCity.dat')
 
 ip = raw_input("What IP-Adress do you want to trace? ")
 
