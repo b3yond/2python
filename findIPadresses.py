@@ -27,7 +27,12 @@ while ip == 0:
     except socket.error:
         print "[ERROR] Illegal IP address. Try again."
         ip = 0
-lst = rec.items()
+try:
+    lst = rec.items()
+except AttributeError:
+    print "[ERROR] IP not found."
+    exit(0)
+
 for key,val in lst:
     print "%s: %s" %(key,val)
     if key == "longitude":
