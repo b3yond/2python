@@ -15,7 +15,7 @@ home = os.environ['HOME']
 if not os.path.isfile(home + '/files/GeoLiteCity.dat'):
     print "[ERROR] GeoLiteCity database missing"
     print "Downloading database to " + home + "/files/"
-    os.system("cd " + home + " && wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz && gzip -d GeoLiteCity.dat.gz")
+    os.system("cd " + home + "/files && wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz && gzip -d GeoLiteCity.dat.gz")
 print "Thanks to OccupyTheWeb, full tutorial here:  http://null-byte.wonderhowto.com/how-to/hack-like-pro-find-exact-location-any-ip-address-0161964/"
 gip = pygeoip.GeoIP(home + '/files/GeoLiteCity.dat')
 
